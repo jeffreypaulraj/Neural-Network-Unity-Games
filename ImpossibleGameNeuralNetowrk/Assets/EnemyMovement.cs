@@ -26,11 +26,11 @@ public class EnemyMovement : MonoBehaviour
 
         if (left)
         {
-            transform.Translate(Vector3.left/40);
+            transform.Translate(Vector3.left/50);
         }
         else
         {
-            transform.Translate(Vector3.right/40);
+            transform.Translate(Vector3.right/50);
         }
 
     }

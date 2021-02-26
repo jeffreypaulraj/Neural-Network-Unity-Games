@@ -33,7 +33,7 @@ public class PlayerMovement : Agent
             }
             EndEpisode();
         }
-        transform.Translate(new Vector3(vectorAction[0] * Time.deltaTime, 0, vectorAction[1] * Time.deltaTime));
+        transform.Translate(new Vector3(vectorAction[0] * Time.deltaTime*2, 0, vectorAction[1] * Time.deltaTime*2));
     }
 
     public override void CollectObservations(VectorSensor sensor)

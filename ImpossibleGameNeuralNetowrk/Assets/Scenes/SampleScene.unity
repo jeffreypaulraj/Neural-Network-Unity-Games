@@ -480,7 +480,7 @@ MonoBehaviour:
     VectorActionSize: 02000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: f7b1ae4b2db664e80b4b2c0fc3e9ad8d, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: ImpossibleBrain
@@ -1791,7 +1791,7 @@ MonoBehaviour:
     VectorActionSize: 02000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: f7b1ae4b2db664e80b4b2c0fc3e9ad8d, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: ImpossibleBrain
@@ -2278,7 +2278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -10.98, y: 22.88, z: -2.35}
+  m_LocalPosition: {x: -21, y: 32.94, z: -2.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2333,7 +2333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0bb48a7b3c344babb923be0f747857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startX: -18
+  startX: -40
 --- !u!65 &1054729990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2844,7 +2844,7 @@ MonoBehaviour:
     VectorActionSize: 02000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: f7b1ae4b2db664e80b4b2c0fc3e9ad8d, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: ImpossibleBrain
@@ -2924,7 +2924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0bb48a7b3c344babb923be0f747857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startX: -18
+  startX: -40
 --- !u!65 &1309133200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3624,7 +3624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0bb48a7b3c344babb923be0f747857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startX: -18
+  startX: -40
 --- !u!65 &1789079562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3858,7 +3858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0bb48a7b3c344babb923be0f747857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startX: -18
+  startX: -40
 --- !u!65 &2075600989
 BoxCollider:
   m_ObjectHideFlags: 0

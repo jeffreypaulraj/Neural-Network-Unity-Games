@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{3ABE9535-2B79-550A-9A27-70880F471869}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EnemyMovement.cs">
+    <Files>
+      <File FileName="Assets/EnemyMovement.cs" Line="20" Column="25" />
+      <File FileName="Assets/PlayerMovement.cs" Line="38" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ImpossibleGameNeuralNetowrk" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="EnemyMovement.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="32cfc283-ddb3-41a6-b939-f27b66e5b1b4" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

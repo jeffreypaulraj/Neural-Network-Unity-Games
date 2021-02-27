@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{3ABE9535-2B79-550A-9A27-70880F471869}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EnemyMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerMovement.cs">
     <Files>
-      <File FileName="Assets/PlayerMovement.cs" Line="72" Column="30" />
-      <File FileName="Assets/EnemyMovement.cs" Line="33" Column="47" />
+      <File FileName="Assets/PlayerMovement.cs" Line="59" Column="30" />
+      <File FileName="Assets/EnemyMovement.cs" Line="18" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ImpossibleGameNeuralNetowrk" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="EnemyMovement.cs" selected="True" />
+              <Node name="PlayerMovement.cs" selected="True" />
             </Node>
           </Node>
         </State>

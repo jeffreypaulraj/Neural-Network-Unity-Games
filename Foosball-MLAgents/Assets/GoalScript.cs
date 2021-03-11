@@ -18,6 +18,7 @@ public class GoalScript : Agent
     public GameObject rowThree_Four;
     public GameObject rowThree_Five;
     public GameObject ball;
+    public int multiplier;
 
     public override void OnActionReceived(float[] vectorAction)
     {
@@ -81,7 +82,23 @@ public class GoalScript : Agent
         ball.transform.position = new Vector3(0, 0, 0);
         float directionX = Random.Range(-4.0f, 4.0f);
         float directionZ = Random.Range(-4.0f, 4.0f);
-
         ball.GetComponent<Rigidbody>().AddForce(new Vector3(directionX, 0, directionZ));
+
+        goalie.transform.position = new Vector3(multiplier * 16, 0, 0);
+
+        rowOne_One.transform.position = new Vector3(multiplier * 12, 0, 2.5f);
+        rowOne_Two.transform.position = new Vector3(multiplier * 12, 0, -2.5f);
+
+        rowTwo_One.transform.position = new Vector3(multiplier * 7, 0, 5.0f);
+        rowTwo_One.transform.position = new Vector3(multiplier * 7, 0, 0f);
+        rowTwo_One.transform.position = new Vector3(multiplier * 7, 0, -5.0f);
+
+        rowThree_One.transform.position = new Vector3(multiplier * 2.3f, 0, 6.0f);
+        rowThree_Two.transform.position = new Vector3(multiplier * 2.3f, 0, 3.0f);
+        rowThree_Three.transform.position = new Vector3(multiplier * 2.3f, 0, 0f);
+        rowThree_Four.transform.position = new Vector3(multiplier * 2.3f, 0, -3.0f);
+        rowThree_Five.transform.position = new Vector3(multiplier * 2.3f, 0, -6.0f);
+
+
     }
 }

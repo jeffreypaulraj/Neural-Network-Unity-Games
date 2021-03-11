@@ -21,26 +21,50 @@ public class GoalScript : Agent
 
     public override void OnActionReceived(float[] vectorAction)
     {
-        goalie.transform.Translate(Vector3.forward * vectorAction[0] * Time.deltaTime);
+        if(goalie.transform.position.z <= 7.5f && goalie.transform.position.z >- -7.5f)
+        {
+            goalie.transform.Translate(Vector3.forward * vectorAction[0] * Time.deltaTime);
+        }
 
-        rowOne_One.transform.Translate(Vector3.forward * vectorAction[1] * Time.deltaTime);
-        rowOne_Two.transform.Translate(Vector3.forward * vectorAction[1] * Time.deltaTime);
+        if(rowOne_One.transform.position.z <= 7.5f && rowOne_Two.transform.position.z >= -7.5f)
+        {
+            rowOne_One.transform.Translate(Vector3.forward * vectorAction[1] * Time.deltaTime);
+            rowOne_Two.transform.Translate(Vector3.forward * vectorAction[1] * Time.deltaTime);
+        }
 
-        rowTwo_One.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
-        rowTwo_Two.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
-        rowTwo_Three.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
+        if(rowTwo_One.transform.position.z <= 7.5f && rowTwo_Three.transform.position.z >= -7.5f)
+        {
+            rowTwo_One.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
+            rowTwo_Two.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
+            rowTwo_Three.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
+        }
 
-        rowThree_One.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-        rowThree_Two.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-        rowThree_Three.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-        rowThree_Four.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-        rowThree_Five.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+        if (rowThree_One.transform.position.z <= 7.5f && rowThree_Five.transform.position.z >= -7.5f)
+        {
+            rowThree_One.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+            rowThree_Two.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+            rowThree_Three.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+            rowThree_Four.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+            rowThree_Five.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+        }
 
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(ball.transform.position);
+        sensor.AddObservation(goalie.transform.position);
+        sensor.AddObservation(rowOne_One.transform.position);
+        sensor.AddObservation(rowOne_Two.transform.position);
+        sensor.AddObservation(rowTwo_One.transform.position);
+        sensor.AddObservation(rowTwo_Two.transform.position);
+        sensor.AddObservation(rowTwo_Three.transform.position);
+        sensor.AddObservation(rowThree_One.transform.position);
+        sensor.AddObservation(rowThree_Two.transform.position);
+        sensor.AddObservation(rowThree_Three.transform.position);
+        sensor.AddObservation(rowThree_Four.transform.position);
+        sensor.AddObservation(rowThree_Five.transform.position);
+
     }
 
     private void OnCollisionEnter(Collision collision)

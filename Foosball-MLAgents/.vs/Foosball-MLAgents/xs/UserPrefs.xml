@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{4CFA6C23-27B9-7CC9-3284-8A4E4FF24A33}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BallMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GoalScript.cs">
     <Files>
-      <File FileName="Assets/GoalScript.cs" Line="90" Column="64" />
-      <File FileName="Assets/BallMove.cs" Line="19" Column="16" />
+      <File FileName="Assets/GoalScript.cs" Line="120" Column="76" />
+      <File FileName="Assets/BallMove.cs" Line="26" Column="57" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Foosball-MLAgents" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="BallMove.cs" selected="True" />
+              <Node name="GoalScript.cs" selected="True" />
             </Node>
           </Node>
         </State>

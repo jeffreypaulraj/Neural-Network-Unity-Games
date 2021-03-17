@@ -117,15 +117,14 @@ public class GoalScript : Agent
         rowOne_Two.transform.position = new Vector3(multiplier * 12, 0, -2.5f);
 
         rowTwo_One.transform.position = new Vector3(multiplier * 7, 0, 5.0f);
-        rowTwo_One.transform.position = new Vector3(multiplier * 7, 0, 0f);
-        rowTwo_One.transform.position = new Vector3(multiplier * 7, 0, -5.0f);
+        rowTwo_Two.transform.position = new Vector3(multiplier * 7, 0, 0f);
+        rowTwo_Three.transform.position = new Vector3(multiplier * 7, 0, -5.0f);
 
         rowThree_One.transform.position = new Vector3(multiplier * 2.3f, 0, 6.0f);
         rowThree_Two.transform.position = new Vector3(multiplier * 2.3f, 0, 3.0f);
         rowThree_Three.transform.position = new Vector3(multiplier * 2.3f, 0, 0f);
         rowThree_Four.transform.position = new Vector3(multiplier * 2.3f, 0, -3.0f);
         rowThree_Five.transform.position = new Vector3(multiplier * 2.3f, 0, -6.0f);
-
 
     }
 }

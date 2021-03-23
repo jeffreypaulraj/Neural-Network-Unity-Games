@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{4CFA6C23-27B9-7CC9-3284-8A4E4FF24A33}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GoalScript.cs">
     <Files>
-      <File FileName="Assets/GoalScript.cs" Line="120" Column="76" />
-      <File FileName="Assets/BallMove.cs" Line="26" Column="57" />
+      <File FileName="Assets/GoalScript.cs" Line="20" Column="28" />
+      <File FileName="Assets/BallMove.cs" Line="44" Column="60" />
+      <File FileName="Assets/PlayerScript.cs" Line="6" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2a3a6af2-2f49-4de5-a021-830b2d352fd7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c2a2bfa6-e49a-4df2-a394-e11cbb596563" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

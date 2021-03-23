@@ -19,61 +19,70 @@ public class GoalScript : Agent
     public GameObject rowThree_Five;
     public GameObject ball;
     public int multiplier;
+    int count = 10000;
 
     public override void OnActionReceived(float[] vectorAction)
     {
-        if(goalie.transform.position.z <= 7.5f && goalie.transform.position.z >= -7.5f)
+        if (count > 0)
         {
-            goalie.transform.Translate(Vector3.forward * vectorAction[0] * Time.deltaTime);
+            if (goalie.transform.position.z <= 7.5f && goalie.transform.position.z >= -7.5f)
+            {
+                goalie.transform.Translate(Vector3.forward * vectorAction[0] * Time.deltaTime);
+            }
+            else
+            {
+                Debug.Log("Wall hit 1");
+                SetReward(-1 * multiplier * ball.transform.position.x);
+                EndEpisode();
+
+            }
+
+            if (rowOne_One.transform.position.z <= 7.5f && rowOne_Two.transform.position.z >= -7.5f)
+            {
+                rowOne_One.transform.Translate(Vector3.forward * vectorAction[1] * Time.deltaTime);
+                rowOne_Two.transform.Translate(Vector3.forward * vectorAction[1] * Time.deltaTime);
+            }
+            else
+            {
+                Debug.Log("Wall hit 2");
+                SetReward(-1 * multiplier * ball.transform.position.x);
+                EndEpisode();
+
+            }
+
+            if (rowTwo_One.transform.position.z <= 7.5f && rowTwo_Three.transform.position.z >= -7.5f)
+            {
+                rowTwo_One.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
+                rowTwo_Two.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
+                rowTwo_Three.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
+            }
+            else
+            {
+                Debug.Log("Wall hit 3");
+                SetReward(-1 * multiplier * ball.transform.position.x);
+                EndEpisode();
+            }
+
+            if (rowThree_One.transform.position.z <= 7.5f && rowThree_Five.transform.position.z >= -7.5f)
+            {
+                rowThree_One.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+                rowThree_Two.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+                rowThree_Three.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+                rowThree_Four.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+                rowThree_Five.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
+            }
+            else
+            {
+                Debug.Log("Wall hit 4");
+                SetReward(-1 * multiplier * ball.transform.position.x);
+                EndEpisode();
+            }
+            count--;
         }
         else
         {
-            Debug.Log("Wall hit 1");
-            SetReward(-100);
+            SetReward(-1 * multiplier * ball.transform.position.x);
             EndEpisode();
-
-        }
-
-        if (rowOne_One.transform.position.z <= 7.5f && rowOne_Two.transform.position.z >= -7.5f)
-        {
-            rowOne_One.transform.Translate(Vector3.forward * vectorAction[1] * Time.deltaTime);
-            rowOne_Two.transform.Translate(Vector3.forward * vectorAction[1] * Time.deltaTime);
-        }
-        else
-        {
-            Debug.Log("Wall hit 2");
-            SetReward(-100);
-            EndEpisode();
-
-        }
-
-        if (rowTwo_One.transform.position.z <= 7.5f && rowTwo_Three.transform.position.z >= -7.5f)
-        {
-            rowTwo_One.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
-            rowTwo_Two.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
-            rowTwo_Three.transform.Translate(Vector3.forward * vectorAction[2] * Time.deltaTime);
-        }
-        else
-        {
-            Debug.Log("Wall hit 3");
-            SetReward(-100);
-            EndEpisode();
-        }
-
-        if (rowThree_One.transform.position.z <= 7.5f && rowThree_Five.transform.position.z >= -7.5f)
-        {
-            rowThree_One.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-            rowThree_Two.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-            rowThree_Three.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-            rowThree_Four.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-            rowThree_Five.transform.Translate(Vector3.forward * vectorAction[3] * Time.deltaTime);
-        }
-        else
-        {
-            Debug.Log("Wall hit 4");
-            SetReward(-100);
-            EndEpisode();
-
         }
 
     }
@@ -106,10 +115,11 @@ public class GoalScript : Agent
 
     public override void OnEpisodeBegin()
     {
+        count = 10000;
         ball.transform.position = new Vector3(0, 0, 0);
         float directionX = Random.Range(-10.0f, 10.0f);
         float directionZ = Random.Range(-10.0f, 10.0f);
-        ball.GetComponent<Rigidbody>().AddForce(new Vector3(directionX, 0, directionZ));
+        ball.GetComponent<Rigidbody>().AddForce(new Vector3(5*directionX, 0, 5*directionZ));
 
         goalie.transform.position = new Vector3(multiplier * 16, 0, 0);
 

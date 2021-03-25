@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{4CFA6C23-27B9-7CC9-3284-8A4E4FF24A33}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GoalScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BallMove.cs">
     <Files>
-      <File FileName="Assets/GoalScript.cs" Line="20" Column="28" />
-      <File FileName="Assets/BallMove.cs" Line="44" Column="60" />
-      <File FileName="Assets/PlayerScript.cs" Line="6" Column="2" />
+      <File FileName="Assets/GoalScript.cs" Line="66" Column="105" />
+      <File FileName="Assets/BallMove.cs" Line="28" Column="10" />
+      <File FileName="Assets/PlayerScript.cs" Line="15" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Foosball-MLAgents" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="GoalScript.cs" selected="True" />
+              <Node name="BallMove.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -19,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c2a2bfa6-e49a-4df2-a394-e11cbb596563" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a9778f23-3d2d-4fd9-b255-1309d715581c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

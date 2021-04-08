@@ -19,7 +19,9 @@ public class GoalScript : Agent
     public GameObject rowThree_Five;
     public GameObject ball;
     public int multiplier;
+    public BallMove scriptB;
     int count = 10000;
+    int collisionCount = 0;
 
     public override void OnActionReceived(float[] vectorAction)
     {
@@ -32,7 +34,8 @@ public class GoalScript : Agent
             else
             {
                 Debug.Log("Wall hit 1");
-                SetReward(-1 * multiplier * ball.transform.position.x);
+                collisionCount = scriptB.getCollisionCount();
+                SetReward(-1 * multiplier * ball.transform.position.x + 10*collisionCount);
                 EndEpisode();
 
             }
@@ -45,7 +48,8 @@ public class GoalScript : Agent
             else
             {
                 Debug.Log("Wall hit 2");
-                SetReward(-1 * multiplier * ball.transform.position.x);
+                collisionCount = scriptB.getCollisionCount();
+                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount);
                 EndEpisode();
 
             }
@@ -59,7 +63,8 @@ public class GoalScript : Agent
             else
             {
                 Debug.Log("Wall hit 3");
-                SetReward(-1 * multiplier * ball.transform.position.x);
+                collisionCount = scriptB.getCollisionCount();
+                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount);
                 EndEpisode();
             }
 
@@ -74,14 +79,16 @@ public class GoalScript : Agent
             else
             {
                 Debug.Log("Wall hit 4");
-                SetReward(-1 * multiplier * ball.transform.position.x);
+                collisionCount = scriptB.getCollisionCount();
+                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount);
                 EndEpisode();
             }
             count--;
         }
         else
         {
-            SetReward(-1 * multiplier * ball.transform.position.x);
+            collisionCount = scriptB.getCollisionCount();
+            SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount);
             EndEpisode();
         }
 
@@ -116,8 +123,10 @@ public class GoalScript : Agent
     public override void OnEpisodeBegin()
     {
         count = 10000;
+        scriptB = (BallMove)ball.GetComponent(typeof(BallMove));
+        scriptB.resetCollisions();
         ball.transform.position = new Vector3(0, 0, 0);
-        float directionX = Random.Range(-10.0f, 10.0f);
+        float directionX = Random.Range(-10.0f, 0.0f);
         float directionZ = Random.Range(-10.0f, 10.0f);
         ball.GetComponent<Rigidbody>().AddForce(new Vector3(5*directionX, 0, 5*directionZ));
 
@@ -135,6 +144,19 @@ public class GoalScript : Agent
         rowThree_Three.transform.position = new Vector3(multiplier * 2.3f, 0, 0f);
         rowThree_Four.transform.position = new Vector3(multiplier * 2.3f, 0, -3.0f);
         rowThree_Five.transform.position = new Vector3(multiplier * 2.3f, 0, -6.0f);
+
+        rowOne_One.transform.eulerAngles = new Vector3(0, 0, 0);
+        rowOne_Two.transform.eulerAngles = new Vector3(0, 0, 0);
+
+        rowTwo_One.transform.eulerAngles = new Vector3(0,0,0);
+        rowTwo_Two.transform.eulerAngles = new Vector3(0, 0, 0);
+        rowTwo_Three.transform.eulerAngles = new Vector3(0, 0, 0);
+
+        rowThree_One.transform.eulerAngles = new Vector3(0, 0, 0);
+        rowThree_Two.transform.eulerAngles = new Vector3(0, 0, 0);
+        rowThree_Three.transform.eulerAngles = new Vector3(0, 0, 0);
+        rowThree_Four.transform.eulerAngles = new Vector3(0, 0, 0);
+        rowThree_Five.transform.eulerAngles = new Vector3(0, 0, 0);
 
     }
 }

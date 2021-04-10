@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{58872DF3-22C9-8C32-F8ED-403FC578EA52}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GetBlocks.cs">
+    <Files>
+      <File FileName="Assets/GetBlocks.cs" Line="14" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ComputerVisionProject" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="GetBlocks.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="43224719-69a4-4fdd-b7d9-73cb7f58e0b3" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

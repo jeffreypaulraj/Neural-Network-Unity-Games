@@ -20,6 +20,7 @@ public class GoalScript : Agent
     public GameObject ball;
     public int multiplier;
     public BallMove scriptB;
+    public BallAgent ballBrainScript;
     int count = 10000;
     int collisionCount = 0;
 
@@ -49,7 +50,7 @@ public class GoalScript : Agent
             {
                 Debug.Log("Wall hit 2");
                 collisionCount = scriptB.getCollisionCount();
-                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount);
+                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount - count);
                 EndEpisode();
 
             }
@@ -64,7 +65,7 @@ public class GoalScript : Agent
             {
                 Debug.Log("Wall hit 3");
                 collisionCount = scriptB.getCollisionCount();
-                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount);
+                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount - count);
                 EndEpisode();
             }
 
@@ -80,7 +81,7 @@ public class GoalScript : Agent
             {
                 Debug.Log("Wall hit 4");
                 collisionCount = scriptB.getCollisionCount();
-                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount);
+                SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount - count);
                 EndEpisode();
             }
             count--;
@@ -88,7 +89,7 @@ public class GoalScript : Agent
         else
         {
             collisionCount = scriptB.getCollisionCount();
-            SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount);
+            SetReward(-1 * multiplier * ball.transform.position.x + 10 * collisionCount - count);
             EndEpisode();
         }
 
@@ -115,20 +116,25 @@ public class GoalScript : Agent
     {
         if (collision.gameObject.name.Equals("Ball"))
         {
-            SetReward(1000);
+            SetReward(-1000);
+
             EndEpisode();
         }
     }
 
     public override void OnEpisodeBegin()
     {
-        count = 10000;
+        count = 20000;
         scriptB = (BallMove)ball.GetComponent(typeof(BallMove));
         scriptB.resetCollisions();
-        ball.transform.position = new Vector3(0, 0, 0);
-        float directionX = Random.Range(-10.0f, 0.0f);
-        float directionZ = Random.Range(-10.0f, 10.0f);
-        ball.GetComponent<Rigidbody>().AddForce(new Vector3(5*directionX, 0, 5*directionZ));
+
+        ballBrainScript = (BallAgent)ball.GetComponent(typeof(BallAgent));
+        //ballBrainScript.RestartGame();
+
+        //ball.transform.position = new Vector3(0, 0, 0);
+        //float directionX = Random.Range(-10.0f, 0.0f);
+        //float directionZ = Random.Range(-10.0f, 10.0f);
+        //ball.GetComponent<Rigidbody>().AddForce(new Vector3(5*directionX, 0, 5*directionZ));
 
         goalie.transform.position = new Vector3(multiplier * 16, 0, 0);
 
@@ -158,5 +164,11 @@ public class GoalScript : Agent
         rowThree_Four.transform.eulerAngles = new Vector3(0, 0, 0);
         rowThree_Five.transform.eulerAngles = new Vector3(0, 0, 0);
 
+    }
+
+    public void GoalEndGame()
+    {
+        AddReward(-200);
+        EndEpisode();
     }
 }

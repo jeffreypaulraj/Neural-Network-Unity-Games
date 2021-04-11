@@ -29,7 +29,7 @@ public class GetBlocks : Agent
         }
         else
         {
-            AddReward(-300);
+            AddReward(-500);
             EndEpisode();
         }
     }
@@ -37,21 +37,22 @@ public class GetBlocks : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.position);
+        sensor.AddObservation(target.transform.position);
     }
 
     public override void OnEpisodeBegin()
     {
-        count = 1000;
+        count = 1500;
         hitValues = new bool[]{false,false,false,false};
         target.layer = 10;
 
-        transform.position = new Vector3(0, 0.5f, -1f);
-        blockOne.transform.position = new Vector3(0.5f, 1.5f, 2f);
+        transform.position = new Vector3(0, 0.5f, -3f);
+        blockOne.transform.position = new Vector3(1f, 1.5f, 2f);
         blockTwo.transform.position = new Vector3(4f, 1.5f, 2f);
         blockThree.transform.position = new Vector3(-2f, 1.5f, 2f);
         blockFour.transform.position = new Vector3(-5f, 1.5f, 2f);
 
-        blockFive.transform.position = new Vector3(0.5f, 1.5f, -0.5f);
+        blockFive.transform.position = new Vector3(1f, 1.5f, -0.5f);
         blockSix.transform.position = new Vector3(4f, 1.5f, -0.5f);
         blockSeven.transform.position = new Vector3(-2f, 1.5f, -0.5f);
         blockEight.transform.position = new Vector3(-5f, 1.5f, -0.5f);
@@ -91,19 +92,19 @@ public class GetBlocks : Agent
         if(collision.gameObject.layer == 8)
         {
             Debug.Log("Hit Red");
-            AddReward(100);
+            AddReward(100 + count/2);
             collision.gameObject.transform.position = new Vector3(-30.0f, 1.5f, 2.0f);
         }
         else if(collision.gameObject.layer == 9)
         {
             Debug.Log("Hit Blue");
-            SetReward(-200);
+            SetReward(-500);
             EndEpisode();
         }
         else if(collision.gameObject.layer == 10)
         {
             Debug.Log("Hit Target");
-            SetReward(500);
+            AddReward(700);
             EndEpisode();
         }
     }

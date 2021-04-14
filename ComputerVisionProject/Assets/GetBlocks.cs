@@ -18,18 +18,20 @@ public class GetBlocks : Agent
     int count;
     int redCount;
     bool[] hitValues;
+    bool checkPointPassed;
 
     public override void OnActionReceived(float[] vectorAction)
     {
         if(count > 0)
         {
-            transform.Translate(new Vector3(vectorAction[0]*Time.deltaTime, 0, 0.2f*Time.deltaTime));
+            transform.Translate(new Vector3(vectorAction[0]*Time.deltaTime, 0, vectorAction[1] * Time.deltaTime));
             transform.Rotate(new Vector3(0, 0, vectorAction[2] * Time.deltaTime));
             count--;
         }
         else
         {
-            AddReward(-500);
+            //AddReward(-500);
+            SetReward(100 + 10 * transform.position.z);
             EndEpisode();
         }
     }
@@ -42,7 +44,7 @@ public class GetBlocks : Agent
 
     public override void OnEpisodeBegin()
     {
-        count = 1500;
+        count = 2000;
         hitValues = new bool[]{false,false,false,false};
         target.layer = 10;
 
@@ -57,7 +59,7 @@ public class GetBlocks : Agent
         blockSeven.transform.position = new Vector3(-2f, 1.5f, -0.5f);
         blockEight.transform.position = new Vector3(-5f, 1.5f, -0.5f);
 
-        target.transform.position = new Vector3(Random.Range(-4.0f,4.0f), 0.5f, 4.0f);
+        target.transform.position = new Vector3(Random.Range(-4.0f,4.0f), 1.5f, 4.0f);
 
         transform.eulerAngles = new Vector3(0, 0, 0);
         blockOne.transform.eulerAngles = new Vector3(0, 0, 0);
@@ -98,8 +100,16 @@ public class GetBlocks : Agent
         else if(collision.gameObject.layer == 9)
         {
             Debug.Log("Hit Blue");
-            SetReward(-500);
-            EndEpisode();
+            if (transform.position.z >= 0.5)
+            {
+                transform.position = new Vector3(-0.3f, transform.position.y, 0.5f);
+                AddReward(-100);
+            }
+            else
+            {
+                //SetReward(-500);
+                EndEpisode();
+            }
         }
         else if(collision.gameObject.layer == 10)
         {
@@ -109,9 +119,33 @@ public class GetBlocks : Agent
         }
     }
 
+    public override void Heuristic(float[] actionsOut)
+    {
+        actionsOut[0] = 0f;
+        actionsOut[1] = 0f;
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            actionsOut[0] = -1.0f;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            actionsOut[0] = 1.0f;
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            actionsOut[1] = 1.0f;
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            actionsOut[1] = -1.0f;
+        }
+    }
+
     public void changeColor(GameObject block, bool redExists)
     {
         float random = Random.Range(-1.0f, 1.0f);
+
         if (random < 0 || redExists)
         {
             block.GetComponent<Renderer>().material.SetColor("_Color", Color.red);

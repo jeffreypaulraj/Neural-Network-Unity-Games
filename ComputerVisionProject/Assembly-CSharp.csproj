@@ -247,23 +247,23 @@
     <Reference Include="UnityEditor">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.9f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Abstractions.TestingHelpers">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.ml-agents@1.0.7/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
-    </Reference>
     <Reference Include="Google.Protobuf">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.barracuda@1.0.4/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Abstractions">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.ml-agents@1.0.7/Plugins/System.IO.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Interactive.Async">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.ml-agents@1.0.7/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
+    <Reference Include="System.IO.Abstractions.TestingHelpers">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.ml-agents@1.0.7/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.ml-agents@1.0.7/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/PackageCache/com.unity.ml-agents@1.0.7/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.9f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -613,8 +613,20 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Barracuda.MacBLAS">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Barracuda.MacBLAS.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Barracuda.Editor">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Barracuda.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -625,38 +637,20 @@
     <Reference Include="Unity.Timeline">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Barracuda.MacBLAS">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Barracuda.MacBLAS.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Barracuda.Editor">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Barracuda.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Barracuda">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Barracuda.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda.iOSBLAS">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Barracuda.iOSBLAS.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ML-Agents.CommunicatorObjects">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.ML-Agents.CommunicatorObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda.BurstBLAS">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Barracuda.BurstBLAS.dll</HintPath>
@@ -667,11 +661,17 @@
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ML-Agents.Editor">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.ML-Agents.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ML-Agents">
       <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/Unity.ML-Agents.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>/Users/jeffrey/Documents/GitHub/Neural-Network-Unity-Games/ComputerVisionProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
